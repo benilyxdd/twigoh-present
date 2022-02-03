@@ -10,7 +10,9 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <h1 className="bg-slate-200">Hello world!</h1>
+        <p className="text-lg text-center">Welcome to the Home Page</p>
+        <p className="text-lg text-center">There is Nothing Here</p>
+        <p className="text-lg text-center">Just Go to the Order Page</p>
       </Layout>
     </div>
   );
