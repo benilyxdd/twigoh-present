@@ -1,17 +1,22 @@
 import ItemBlock from '../src/components/ItemBlock';
 import Layout from '../src/components/Layout';
 
-import { images } from '../constants/Images';
+import MOCK_DATA from '../constants/MOCK_DATA';
 
 const Order = () => {
   return (
     <Layout>
       <div className="flex flex-wrap gap-2 justify-center align-middle">
-        <ItemBlock imageUrl={images[0]} name="hello" id={1} />
-        <ItemBlock imageUrl={images[0]} name="hello" id={2} />
-        <ItemBlock imageUrl={images[0]} name="hello" id={3} />
-        <ItemBlock imageUrl={images[0]} name="hello" id={4} />
-        <ItemBlock imageUrl={images[0]} name="hello" id={5} />
+        {MOCK_DATA.map((item) => {
+          return (
+            <ItemBlock
+              imageUrl="https://picsum.photos/200"
+              name={item.name}
+              id={item.id}
+              key={item.id}
+            />
+          );
+        })}
       </div>
     </Layout>
   );
