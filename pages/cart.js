@@ -33,7 +33,7 @@ const Cart = () => {
                   <td>{item.quantity}</td>
                   <td>
                     <button onClick={() => dispatch(removeItem(item.id))}>
-                      Remove
+                      <p className="text-red-600">Remove</p>
                     </button>
                   </td>
                 </tr>
